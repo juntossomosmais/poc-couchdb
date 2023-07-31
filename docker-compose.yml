@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  couchdb:
+    image: couchdb:latest
+    container_name: couchdb
+    restart: always
+    ports:
+      - "5984:5984"
+    volumes:
+      - couchdb_data:/opt/couchdb/data
+      - couchdb_config:/opt/couchdb/etc/local.d
+    environment:
+      - COUCHDB_USER=admin
+      - COUCHDB_PASSWORD=admin_password
+
+volumes:
+  couchdb_data:
+  couchdb_config:

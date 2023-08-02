@@ -1,0 +1,75 @@
+<Project>
+    <PropertyGroup Label="Common properties">
+        <Product>POC Marketing</Product>
+        <Copyright>Copyright (c) 2023-2023 Juntos Somos Mais.</Copyright>
+        <Authors>Matheus Rodrigues Del Re.</Authors>
+        <TargetFramework>net7.0</TargetFramework>
+        <LangVersion>latest</LangVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <NoWarn>8981, CS0660, CS0661</NoWarn>
+    </PropertyGroup>
+
+    <PropertyGroup Label="Packages dependency versions">
+    
+        <!--Asp-->
+        <Asp_Versioning_Mvc_ApiExplorer_Version>7.0.0</Asp_Versioning_Mvc_ApiExplorer_Version>
+        <Asp_Versioning_Http_Version>7.0.0</Asp_Versioning_Http_Version>
+
+        <!--CorrelationId-->
+        <CorrelationId_Version>3.0.1</CorrelationId_Version>
+
+        <!--EntityFrameworkCore-->
+        <Microsoft_EntityFrameworkCore_Version>7.0.9</Microsoft_EntityFrameworkCore_Version>
+        <Microsoft_EntityFrameworkCore_Relational_Version>7.0.9</Microsoft_EntityFrameworkCore_Relational_Version>
+        <Microsoft_EntityFrameworkCore_Design_Version>7.0.9</Microsoft_EntityFrameworkCore_Design_Version>
+        <Microsoft_EntityFrameworkCore_SqlServer_Version>7.0.9</Microsoft_EntityFrameworkCore_SqlServer_Version>
+        <Microsoft_EntityFrameworkCore_Tools_Version>7.0.9</Microsoft_EntityFrameworkCore_Tools_Version>
+
+        <!--FluentValidation-->
+        <FluentValidation_Version>11.6.0</FluentValidation_Version>
+        <FluentValidation_AspNetCore_Version>11.3.0</FluentValidation_AspNetCore_Version>
+        <FluentValidation_DependencyInjectionExtensions_Version>11.6.0</FluentValidation_DependencyInjectionExtensions_Version>
+
+        <!--gRPC-->
+        <Google_Protobuf_Version>3.23.4</Google_Protobuf_Version>
+        <Grpc_Net_Client_Version>2.55.0</Grpc_Net_Client_Version>
+        <Grpc_Net_ClientFactory_Version>2.55.0</Grpc_Net_ClientFactory_Version>
+        <Grpc_Tools_Version>2.56.2</Grpc_Tools_Version>
+        <Grpc_AspNetCore_Version>2.55.0</Grpc_AspNetCore_Version>
+        <Grpc_AspNetCore_Server_ClientFactory>2.55.0</Grpc_AspNetCore_Server_ClientFactory>
+
+        <!--JsonNet-->
+        <JsonNet_ContractResolvers_Version>2.0.0</JsonNet_ContractResolvers_Version>
+
+        <!--MassTransit-->
+        <MassTransit_Version>8.0.16</MassTransit_Version>
+        <MassTransit_Newtonsoft_Version>8.0.16</MassTransit_Newtonsoft_Version>
+        <MassTransit_RabbitMQ_Version>8.0.16</MassTransit_RabbitMQ_Version>
+
+        <!--MicroElements-->
+        <MicroElements_Swashbuckle_FluentValidation_Version>5.7.0</MicroElements_Swashbuckle_FluentValidation_Version>
+        
+        <!--Microsoft-->
+        <Microsoft_Extensions_Hosting_Version>7.0.1</Microsoft_Extensions_Hosting_Version>
+        <Microsoft_Extensions_Options_DataAnnotations_Version>7.0.0</Microsoft_Extensions_Options_DataAnnotations_Version>
+        <Microsoft_AspNetCore_Mvc_NewtonsoftJson_Version>7.0.9</Microsoft_AspNetCore_Mvc_NewtonsoftJson_Version>
+
+        <!--Newtonsoft-->
+        <Newtonsoft_Json_Version>13.0.3</Newtonsoft_Json_Version>
+
+        <!--Serilog-->
+        <Serilog_Version>3.0.1</Serilog_Version>
+        <Serilog_Extensions_Hosting_Version>7.0.0</Serilog_Extensions_Hosting_Version>
+        <Serilog_AspNetCore_Version>7.0.0</Serilog_AspNetCore_Version>
+
+        <!--SmartEnum-->
+        <Ardalis_SmartEnum_Version>7.0.0</Ardalis_SmartEnum_Version>
+
+        <!--Swashbuckle-->
+        <Swashbuckle_AspNetCore_Version>6.5.0</Swashbuckle_AspNetCore_Version>
+        <Swashbuckle_AspNetCore_Newtonsoft_Version>6.5.0</Swashbuckle_AspNetCore_Newtonsoft_Version>
+
+    </PropertyGroup>
+</Project>

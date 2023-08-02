@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <ItemGroup>
+        <PackageReference Include="CouchDB.NET" Version="3.4.0" />
+        <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="$(FluentValidation_DependencyInjectionExtensions_Version)" />
+        <PackageReference Include="MassTransit.Newtonsoft" Version="$(MassTransit_Newtonsoft_Version)" />
+        <PackageReference Include="MassTransit.RabbitMQ" Version="$(MassTransit_RabbitMQ_Version)" />
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="$(Microsoft_Extensions_Hosting_Version)" />
+        <PackageReference Include="Microsoft.Extensions.Options.DataAnnotations" Version="$(Microsoft_Extensions_Options_DataAnnotations_Version)" />
+        <PackageReference Include="Serilog" Version="$(Serilog_Version)" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <ProjectReference Include="..\Application\Application.csproj" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <Folder Include="EventBus\Consumers\Events\" />
+    </ItemGroup>
+
+</Project>

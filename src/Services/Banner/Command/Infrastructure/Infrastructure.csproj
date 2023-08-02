@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <ItemGroup>
+        <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="$(FluentValidation_DependencyInjectionExtensions_Version)" />
+        <PackageReference Include="JsonNet.ContractResolvers" Version="$(JsonNet_ContractResolvers_Version)" />
+        <PackageReference Include="MassTransit.Newtonsoft" Version="$(MassTransit_Newtonsoft_Version)" />
+        <PackageReference Include="MassTransit.RabbitMQ" Version="$(MassTransit_RabbitMQ_Version)" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="$(Microsoft_EntityFrameworkCore_Version)" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="$(Microsoft_EntityFrameworkCore_Relational_Version)" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="$(Microsoft_EntityFrameworkCore_Design_Version)" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="$(Microsoft_EntityFrameworkCore_SqlServer_Version)" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="$(Microsoft_EntityFrameworkCore_Tools_Version)" />
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="$(Microsoft_Extensions_Hosting_Version)" />
+        <PackageReference Include="Microsoft.Extensions.Options.DataAnnotations" Version="$(Microsoft_Extensions_Options_DataAnnotations_Version)" />
+        <PackageReference Include="Serilog" Version="$(Serilog_Version)" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <ProjectReference Include="..\Application\Application.csproj" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <Folder Include="EventStore\Migrations\" />
+      <Folder Include="MessageBus\Consumers\Commands\" />
+      <Folder Include="MessageBus\Consumers\Events\" />
+    </ItemGroup>
+
+</Project>

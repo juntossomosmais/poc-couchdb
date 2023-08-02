@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <ItemGroup>
+        <PackageReference Include="Ardalis.SmartEnum" Version="$(Ardalis_SmartEnum_Version)" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\..\Contracts\Contracts.csproj" />
+    </ItemGroup>
+
+</Project>

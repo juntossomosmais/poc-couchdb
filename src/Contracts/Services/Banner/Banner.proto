@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package Contracts.Services.Banner.Protobuf;
+
+import "Abstractions/Abstractions.proto";
+
+service BannerService {
+
+}

@@ -1,10 +1,19 @@
 version: '3.8'
 
 services:
+
+  mssql:
+    container_name: mssql
+    image: mcr.microsoft.com/mssql/server
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: "!MyStrongPassword"
+      ACCEPT_EULA: "Y"
+
   couchdb:
-    image: couchdb:latest
     container_name: couchdb
-    restart: always
+    image: couchdb:latest
     ports:
       - "5984:5984"
     volumes:
@@ -13,6 +22,17 @@ services:
     environment:
       - COUCHDB_USER=admin
       - COUCHDB_PASSWORD=admin_password
+
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3-management-alpine
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: "guest"
+      RABBITMQ_DEFAULT_PASS: "guest"
+      RABBITMQ_DEFAULT_VHOST: "jsm"
 
 volumes:
   couchdb_data:

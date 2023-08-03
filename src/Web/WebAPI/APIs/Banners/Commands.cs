@@ -7,7 +7,7 @@ namespace WebAPI.APIs.Banners;
 
 public static class Commands
 {
-    public record CreateBanner(IBus Bus, Payloads.CreateBanner Payload, CancellationToken CancellationToken)
+    public record Create(IBus Bus, Payloads.Create Payload, CancellationToken CancellationToken)
         : Validatable<CreateBannerValidator>, ICommand<Command.CreateBanner>
     {
         public Command.CreateBanner Command

@@ -38,7 +38,7 @@
         <Grpc_Net_ClientFactory_Version>2.55.0</Grpc_Net_ClientFactory_Version>
         <Grpc_Tools_Version>2.56.2</Grpc_Tools_Version>
         <Grpc_AspNetCore_Version>2.55.0</Grpc_AspNetCore_Version>
-        <Grpc_AspNetCore_Server_ClientFactory>2.55.0</Grpc_AspNetCore_Server_ClientFactory>
+        <Grpc_AspNetCore_Server_ClientFactory_Version>2.55.0</Grpc_AspNetCore_Server_ClientFactory_Version>
 
         <!--JsonNet-->
         <JsonNet_ContractResolvers_Version>2.0.0</JsonNet_ContractResolvers_Version>

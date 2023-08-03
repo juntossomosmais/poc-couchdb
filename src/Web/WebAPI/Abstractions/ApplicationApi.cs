@@ -21,7 +21,6 @@ public static class ApplicationApi
         {
             var endpoint = await request.Bus.GetSendEndpoint(Address<TCommand>());
             await endpoint.Send(request.Command, request.CancellationToken);
-            
             return Accepted("");
         }
     }

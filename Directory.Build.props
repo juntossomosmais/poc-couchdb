@@ -24,7 +24,7 @@
         <CorrelationId_Version>3.0.1</CorrelationId_Version>
 
         <!--Coverlet-->
-        <Coverlet_Collector_Version>3.2.0</Coverlet_Collector_Version>
+        <Coverlet_Collector_Version>6.0.0</Coverlet_Collector_Version>
 
         <!--EntityFrameworkCore-->
         <Microsoft_EntityFrameworkCore_Version>7.0.9</Microsoft_EntityFrameworkCore_Version>

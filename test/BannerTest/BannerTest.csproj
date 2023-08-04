@@ -12,6 +12,5 @@
         <PackageReference Include="NUnit.Analyzers" Version="$(NUnit_Analyzers_Version)" />
         <PackageReference Include="coverlet.collector" Version="$(Coverlet_Collector_Version)" />
     </ItemGroup>
-
-
+    
 </Project>

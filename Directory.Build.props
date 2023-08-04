@@ -34,7 +34,7 @@
         <Microsoft_EntityFrameworkCore_Tools_Version>7.0.9</Microsoft_EntityFrameworkCore_Tools_Version>
 
         <!--FluentValidation-->
-        <FluentValidation_Version>11.5.2</FluentValidation_Version>
+        <FluentValidation_Version>11.6.0</FluentValidation_Version>
         <FluentValidation_AspNetCore_Version>11.3.0</FluentValidation_AspNetCore_Version>
         <FluentValidation_DependencyInjectionExtensions_Version>11.6.0</FluentValidation_DependencyInjectionExtensions_Version>
 

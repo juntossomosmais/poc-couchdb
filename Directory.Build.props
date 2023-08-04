@@ -67,7 +67,7 @@
 
         <!--NUnit-->
         <NUnit_Version>3.13.3</NUnit_Version>
-        <NUnit3TestAdapter_Version>4.4.2</NUnit3TestAdapter_Version>
+        <NUnit3TestAdapter_Version>4.5.0</NUnit3TestAdapter_Version>
         <NUnit_Analyzers_Version>3.6.1</NUnit_Analyzers_Version>
 
         <!--Serilog-->

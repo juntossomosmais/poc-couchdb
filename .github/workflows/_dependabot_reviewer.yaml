@@ -1,4 +1,4 @@
-ame: Dependabot reviewer
+name: Dependabot reviewer
 
 on:
   workflow_call:

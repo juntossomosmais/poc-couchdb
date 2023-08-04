@@ -13,4 +13,5 @@
         <PackageReference Include="coverlet.collector" Version="$(Coverlet_Collector_Version)" />
     </ItemGroup>
     
+    
 </Project>

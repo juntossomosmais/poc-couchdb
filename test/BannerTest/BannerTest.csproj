@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <IsPackable>false</IsPackable>
+        <IsTestProject>true</IsTestProject>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="$(Microsoft_NET_Test_Sdk_Version)" />
+        <PackageReference Include="NUnit" Version="$(NUnit_Version)" />
+        <PackageReference Include="NUnit3TestAdapter" Version="$(NUnit3TestAdapter_Version)" />
+        <PackageReference Include="NUnit.Analyzers" Version="$(NUnit_Analyzers_Version)" />
+        <PackageReference Include="coverlet.collector" Version="$(Coverlet_Collector_Version)" />
+    </ItemGroup>
+
+
+</Project>

@@ -1,0 +1,18 @@
+name: Banner - Query
+run-name: Banner Query Workflow
+
+on:
+  push:
+    paths:
+      - src/Services/Banner/Query/**.cs
+      - src/Services/Banner/Query/**.csproj
+      - Directory.Build.props
+      - .github/workflows/banner-query.yaml
+
+jobs:
+  call-workflow:
+    uses: ./.github/workflows/_workflow.yaml
+    with:
+      path: src/Services/Banner/Query
+      project: GrpcService
+      test: test/BannerTest 

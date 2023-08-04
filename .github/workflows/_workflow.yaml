@@ -1,0 +1,29 @@
+name: _Template Workflow
+on:
+  workflow_call:
+    inputs:
+      path:
+        description: 'The path passed from the caller workflow'
+        required: true
+        type: string
+      project:
+        description: 'The project passed from the caller workflow'
+        required: true
+        type: string
+      test:
+        description: 'The test path passed from the caller workflow'
+        required: true
+        type: string
+jobs:
+  build:
+    uses: ./.github/workflows/_build.yaml
+    with:
+      project: ./${{ inputs.path }}/${{ inputs.project }}
+  test:
+    needs: [ build ]
+    uses: ./.github/workflows/_test.yaml
+    with:
+      test: ./${{ inputs.test }}
+  dependabot-reviwer:
+    needs: [ test ]
+    uses: ./.github/workflows/_dependabot_reviewer.yaml

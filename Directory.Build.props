@@ -24,7 +24,7 @@
         <CorrelationId_Version>3.0.1</CorrelationId_Version>
 
         <!--Coverlet-->
-        <Coverlet_Collector_Version>3.2.0</Coverlet_Collector_Version>
+        <Coverlet_Collector_Version>6.0.0</Coverlet_Collector_Version>
 
         <!--EntityFrameworkCore-->
         <Microsoft_EntityFrameworkCore_Version>7.0.9</Microsoft_EntityFrameworkCore_Version>
@@ -67,7 +67,7 @@
 
         <!--NUnit-->
         <NUnit_Version>3.13.3</NUnit_Version>
-        <NUnit3TestAdapter_Version>4.4.2</NUnit3TestAdapter_Version>
+        <NUnit3TestAdapter_Version>4.5.0</NUnit3TestAdapter_Version>
         <NUnit_Analyzers_Version>3.6.1</NUnit_Analyzers_Version>
 
         <!--Serilog-->
@@ -83,7 +83,7 @@
         <Swashbuckle_AspNetCore_Newtonsoft_Version>6.5.0</Swashbuckle_AspNetCore_Newtonsoft_Version>
 
         <!--Test-->
-        <Microsoft_NET_Test_Sdk_Version>17.5.0</Microsoft_NET_Test_Sdk_Version>
+        <Microsoft_NET_Test_Sdk_Version>17.6.3</Microsoft_NET_Test_Sdk_Version>
 
     </PropertyGroup>
 </Project>

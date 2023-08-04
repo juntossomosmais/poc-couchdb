@@ -6,6 +6,8 @@ on:
     paths:
       - src/Services/Banner/Command/**.cs
       - src/Services/Banner/Command/**.csproj
+      - test/BannerTest/**.cs
+      - test/BannerTest/**.csproj
       - Directory.Build.props
       - .github/workflows/banner-command.yaml
 

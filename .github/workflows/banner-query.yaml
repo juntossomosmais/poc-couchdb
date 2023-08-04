@@ -6,6 +6,8 @@ on:
     paths:
       - src/Services/Banner/Query/**.cs
       - src/Services/Banner/Query/**.csproj
+      - test/BannerTest/**.cs
+      - test/BannerTest/**.csproj
       - Directory.Build.props
       - .github/workflows/banner-query.yaml
 

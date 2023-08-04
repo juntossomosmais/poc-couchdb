@@ -5,14 +5,14 @@ namespace Contracts.Services.Banner;
 
 public sealed class BannerDetails : CouchDocument, IProjection
 {
-    public string Title { get; }
-    public string ImagePath { get; }
-    public int Order { get; }
-    public string CallToAction { get; }
-    public string Author { get; }
-    public int Status { get; }
-    public bool IsDeleted { get; }
-    public long Version { get; }
+    public string Title { get; set; }
+    public string ImagePath { get; set;}
+    public int Order { get; set;}
+    public string CallToAction { get; set;}
+    public string Author { get; set;}
+    public int Status { get; set;}
+    public bool IsDeleted { get; set;}
+    public long Version { get; set;}
 
     public BannerDetails(Guid bannerId, string title, string imagePath, int order, string callToAction, string author, int status, bool isDeleted, long version)
     {

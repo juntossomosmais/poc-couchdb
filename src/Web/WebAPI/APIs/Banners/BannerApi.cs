@@ -18,6 +18,12 @@ public static class IdentityApi
         group.MapDelete("/{bannerId:guid}", ([AsParameters] Commands.DeleteBanner delete)
             => ApplicationApi.SendCommandAsync(delete));
         
+        group.MapPut("/{bannerId:guid}/activate", ([AsParameters] Commands.ActivateBanner activateBanner)
+            => ApplicationApi.SendCommandAsync(activateBanner));
+
+        group.MapPut("/{bannerId:guid}/deactivate", ([AsParameters] Commands.DeactivateBanner deactivateBanner)
+            => ApplicationApi.SendCommandAsync(deactivateBanner));
+        
         return builder;
     }
 }

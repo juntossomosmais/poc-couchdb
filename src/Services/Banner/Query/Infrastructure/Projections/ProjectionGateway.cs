@@ -29,7 +29,7 @@ public class ProjectionGateway<TProjection> : IProjectionGateway<TProjection>
         return await database.AsQueryable().Where(predicate).FirstOrDefaultAsync(cancellationToken);
     }
 
-    public async Task<TProjection> ReplaceInsertAsync(TProjection replacement, CancellationToken cancellationToken)
+    public async Task<TProjection> AddOrUpdateAsync(TProjection replacement, CancellationToken cancellationToken)
     {
         var database = await GetDatabaseAsync(cancellationToken);
         

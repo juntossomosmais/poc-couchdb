@@ -6,7 +6,9 @@ namespace Infrastructure.EventBus.Consumers.Events;
 
 public class ProjectBannerDetailsWhenBannerChangedConsumer : 
     IConsumer<DomainEvent.BannerCreated>,
-    IConsumer<DomainEvent.BannerDeleted>
+    IConsumer<DomainEvent.BannerDeleted>,
+    IConsumer<DomainEvent.BannerActivated>,
+    IConsumer<DomainEvent.BannerDeactivated>
 {
     private readonly IProjectBannerDetailsWhenBannerChangedInteractor _interactor;
     
@@ -19,5 +21,11 @@ public class ProjectBannerDetailsWhenBannerChangedConsumer :
         => _interactor.InteractAsync(context.Message, context.CancellationToken);
 
     public Task Consume(ConsumeContext<DomainEvent.BannerDeleted> context)
+        => _interactor.InteractAsync(context.Message, context.CancellationToken);
+
+    public Task Consume(ConsumeContext<DomainEvent.BannerActivated> context)
+        => _interactor.InteractAsync(context.Message, context.CancellationToken);
+
+    public Task Consume(ConsumeContext<DomainEvent.BannerDeactivated> context)
         => _interactor.InteractAsync(context.Message, context.CancellationToken);
 }

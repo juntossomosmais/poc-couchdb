@@ -6,7 +6,9 @@ namespace Application.UseCases.Events;
 
 public interface IProjectBannerDetailsWhenBannerChangedInteractor :
     IInteractor<DomainEvent.BannerCreated>,
-    IInteractor<DomainEvent.BannerDeleted> { }
+    IInteractor<DomainEvent.BannerDeleted>,
+    IInteractor<DomainEvent.BannerActivated>,
+    IInteractor<DomainEvent.BannerDeactivated> { }
 
 public class ProjectBannerDetailsWhenBannerChangedInteractor : IProjectBannerDetailsWhenBannerChangedInteractor
 {
@@ -30,9 +32,29 @@ public class ProjectBannerDetailsWhenBannerChangedInteractor : IProjectBannerDet
             false,
             @event.Version);
 
-        await _projectionGateway.ReplaceInsertAsync(userDetails, cancellationToken);
+        await _projectionGateway.AddOrUpdateAsync(userDetails, cancellationToken);
     }
 
     public async Task InteractAsync(DomainEvent.BannerDeleted @event, CancellationToken cancellationToken)
         => await _projectionGateway.DeleteAsync(@event.BannerId.ToString(), cancellationToken);
+
+    public async Task InteractAsync(DomainEvent.BannerActivated @event, CancellationToken cancellationToken)
+    {
+        var banner = await _projectionGateway.GetAsync(@event.BannerId.ToString(), cancellationToken);
+        
+        banner.Status = 1;
+        banner.Version = @event.Version;
+        
+        await _projectionGateway.AddOrUpdateAsync(banner, cancellationToken);
+    }
+
+    public async Task InteractAsync(DomainEvent.BannerDeactivated @event, CancellationToken cancellationToken)
+    {
+        var banner = await _projectionGateway.GetAsync(@event.BannerId.ToString(), cancellationToken);
+        
+        banner.Status = 0;
+        banner.Version = @event.Version;
+        
+        await _projectionGateway.AddOrUpdateAsync(banner, cancellationToken);
+    }
 }

@@ -24,7 +24,7 @@ public class Banner : AggregateRoot<BannerValidator>
         new CreateBannerValidator().ValidateAndThrow(cmd);
         
         RaiseEvent<DomainEvent.BannerCreated>(version
-            => new DomainEvent.BannerCreated(Guid.NewGuid(), cmd.Title, cmd.ImagePath, cmd.Order, cmd.CallToAction, cmd.Author, BannerStatus.Inactive, version));
+            => new DomainEvent.BannerCreated(cmd.BannerId, cmd.Title, cmd.ImagePath, cmd.Order, cmd.CallToAction, cmd.Author, BannerStatus.Inactive, version));
     }
     
     private void Handle(Command.DeleteBanner cmd)
@@ -35,6 +35,18 @@ public class Banner : AggregateRoot<BannerValidator>
         
         RaiseEvent<DomainEvent.BannerDeleted>(version => new DomainEvent.BannerDeleted(cmd.BannerId, version));
     }
+    
+    private void Handle(Command.ActivateBanner cmd)
+    {
+        if (Status == BannerStatus.Inactive)
+            RaiseEvent<DomainEvent.BannerActivated>(version => new DomainEvent.BannerActivated(cmd.BannerId, version));
+    }
+    
+    private void Handle(Command.DeactivateBanner cmd)
+    {
+        if (Status == BannerStatus.Active)
+            RaiseEvent<DomainEvent.BannerDeactivated>(version => new DomainEvent.BannerDeactivated(cmd.BannerId, version));
+    }
 
     protected override void Apply(IDomainEvent @event)
         => When(@event as dynamic);
@@ -44,4 +56,10 @@ public class Banner : AggregateRoot<BannerValidator>
     
     private void When(DomainEvent.BannerDeleted _)
         => IsDeleted = true;
+    
+    private void When(DomainEvent.BannerActivated _)
+        => Status = BannerStatus.Active;
+
+    private void When(DomainEvent.BannerDeactivated _)
+        => Status = BannerStatus.Inactive;
 }

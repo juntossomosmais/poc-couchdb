@@ -14,5 +14,7 @@ public static class ServiceCollectionExtensions
     public static IServiceCollection AddCommandInteractors(this IServiceCollection services)
         => services
             .AddScoped<IInteractor<Command.CreateBanner>, CreateBannerInteractor>()
-            .AddScoped<IInteractor<Command.DeleteBanner>, DeleteBannerInteractor>();
+            .AddScoped<IInteractor<Command.DeleteBanner>, DeleteBannerInteractor>()
+            .AddScoped<IInteractor<Command.ActivateBanner>, ActivateBannerInteractor>()
+            .AddScoped<IInteractor<Command.DeactivateBanner>, DeactivateBannerInteractor>();
 }

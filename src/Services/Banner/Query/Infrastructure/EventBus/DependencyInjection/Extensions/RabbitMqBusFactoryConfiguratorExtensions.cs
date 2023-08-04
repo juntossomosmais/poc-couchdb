@@ -11,6 +11,8 @@ internal static class RabbitMqBusFactoryConfiguratorExtensions
     {
         cfg.ConfigureEventReceiveEndpoint<ProjectBannerDetailsWhenBannerChangedConsumer, DomainEvent.BannerCreated>(context);
         cfg.ConfigureEventReceiveEndpoint<ProjectBannerDetailsWhenBannerChangedConsumer, DomainEvent.BannerDeleted>(context);
+        cfg.ConfigureEventReceiveEndpoint<ProjectBannerDetailsWhenBannerChangedConsumer, DomainEvent.BannerActivated>(context);
+        cfg.ConfigureEventReceiveEndpoint<ProjectBannerDetailsWhenBannerChangedConsumer, DomainEvent.BannerDeactivated>(context);
     }
 
     private static void ConfigureEventReceiveEndpoint<TConsumer, TEvent>(this IReceiveConfigurator bus, IRegistrationContext context)

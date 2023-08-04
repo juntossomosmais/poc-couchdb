@@ -8,6 +8,6 @@ public interface IProjectionGateway<TProjection>
 {
     Task<TProjection?> GetAsync(string id, CancellationToken cancellationToken);
     Task<TProjection?> FindAsync(Expression<Func<TProjection, bool>> predicate, CancellationToken cancellationToken);
-    Task<TProjection> ReplaceInsertAsync(TProjection replacement, CancellationToken cancellationToken);
+    Task<TProjection> AddOrUpdateAsync(TProjection replacement, CancellationToken cancellationToken);
     Task DeleteAsync(string id, CancellationToken cancellationToken);
 }

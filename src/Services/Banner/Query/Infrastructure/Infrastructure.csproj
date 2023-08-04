@@ -1,8 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <ItemGroup>
-        <PackageReference Include="CouchDB.NET" Version="3.4.0" />
-        <PackageReference Include="CouchDB.NET.DependencyInjection" Version="3.4.0" />
+        <PackageReference Include="CouchDB.NET" Version="$(CouchDB_NET_Version)" />
         <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="$(FluentValidation_DependencyInjectionExtensions_Version)" />
         <PackageReference Include="MassTransit.Newtonsoft" Version="$(MassTransit_Newtonsoft_Version)" />
         <PackageReference Include="MassTransit.RabbitMQ" Version="$(MassTransit_RabbitMQ_Version)" />

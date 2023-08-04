@@ -17,6 +17,9 @@
         <Asp_Versioning_Mvc_ApiExplorer_Version>7.0.0</Asp_Versioning_Mvc_ApiExplorer_Version>
         <Asp_Versioning_Http_Version>7.0.0</Asp_Versioning_Http_Version>
 
+        <!--CouchDB-->
+        <CouchDB_NET_Version>3.4.0</CouchDB_NET_Version>
+
         <!--CorrelationId-->
         <CorrelationId_Version>3.0.1</CorrelationId_Version>
 

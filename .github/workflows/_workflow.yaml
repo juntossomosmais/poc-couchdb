@@ -24,6 +24,3 @@ jobs:
     uses: ./.github/workflows/_test.yaml
     with:
       test: ./${{ inputs.test }}
-  dependabot-reviwer:
-    needs: [ test ]
-    uses: ./.github/workflows/_dependabot_reviewer.yaml

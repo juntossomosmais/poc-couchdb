@@ -83,7 +83,7 @@
         <Swashbuckle_AspNetCore_Newtonsoft_Version>6.5.0</Swashbuckle_AspNetCore_Newtonsoft_Version>
 
         <!--Test-->
-        <Microsoft_NET_Test_Sdk_Version>17.5.0</Microsoft_NET_Test_Sdk_Version>
+        <Microsoft_NET_Test_Sdk_Version>17.6.3</Microsoft_NET_Test_Sdk_Version>
 
     </PropertyGroup>
 </Project>

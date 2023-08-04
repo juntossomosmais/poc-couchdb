@@ -26,6 +26,15 @@ public class Banner : AggregateRoot<BannerValidator>
         RaiseEvent<DomainEvent.BannerCreated>(version
             => new DomainEvent.BannerCreated(Guid.NewGuid(), cmd.Title, cmd.ImagePath, cmd.Order, cmd.CallToAction, cmd.Author, BannerStatus.Inactive, version));
     }
+    
+    private void Handle(Command.DeleteBanner cmd)
+    {
+        new DeleteBannerValidator().ValidateAndThrow(cmd);
+        
+        if (IsDeleted) return;
+        
+        RaiseEvent<DomainEvent.BannerDeleted>(version => new DomainEvent.BannerDeleted(cmd.BannerId, version));
+    }
 
     protected override void Apply(IDomainEvent @event)
         => When(@event as dynamic);
@@ -33,4 +42,6 @@ public class Banner : AggregateRoot<BannerValidator>
     private void When(DomainEvent.BannerCreated @event)
         => (Id, Title, ImagePath, Order, CallToAction, Author, Status, _) = @event;
     
+    private void When(DomainEvent.BannerDeleted _)
+        => IsDeleted = true;
 }

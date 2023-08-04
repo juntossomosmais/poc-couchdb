@@ -2,6 +2,7 @@
 
     <ItemGroup>
         <PackageReference Include="CouchDB.NET" Version="3.4.0" />
+        <PackageReference Include="CouchDB.NET.DependencyInjection" Version="3.4.0" />
         <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="$(FluentValidation_DependencyInjectionExtensions_Version)" />
         <PackageReference Include="MassTransit.Newtonsoft" Version="$(MassTransit_Newtonsoft_Version)" />
         <PackageReference Include="MassTransit.RabbitMQ" Version="$(MassTransit_RabbitMQ_Version)" />
@@ -12,10 +13,6 @@
     
     <ItemGroup>
       <ProjectReference Include="..\Application\Application.csproj" />
-    </ItemGroup>
-    
-    <ItemGroup>
-      <Folder Include="EventBus\Consumers\Events\" />
     </ItemGroup>
 
 </Project>

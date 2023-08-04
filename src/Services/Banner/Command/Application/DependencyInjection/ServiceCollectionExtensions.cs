@@ -1,4 +1,7 @@
+using Application.Abstractions;
 using Application.Services;
+using Application.UseCases.Commands;
+using Contracts.Services.Banner;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Application.DependencyInjection;
@@ -9,8 +12,7 @@ public static class ServiceCollectionExtensions
         => services.AddScoped<IApplicationService, ApplicationService>();
 
     public static IServiceCollection AddCommandInteractors(this IServiceCollection services)
-        => services;
-
-    public static IServiceCollection AddEventInteractors(this IServiceCollection services)
-        => services;
+        => services
+            .AddScoped<IInteractor<Command.CreateBanner>, CreateBannerInteractor>()
+            .AddScoped<IInteractor<Command.DeleteBanner>, DeleteBannerInteractor>();
 }

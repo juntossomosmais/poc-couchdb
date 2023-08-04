@@ -12,8 +12,11 @@ public static class IdentityApi
     {
         var group = builder.MapGroup(BaseUrl).HasApiVersion(1);
 
-        group.MapPost("/create", ([AsParameters] Commands.Create registerUser)
-            => ApplicationApi.SendCommandAsync(registerUser));
+        group.MapPost("/create", ([AsParameters] Commands.CreateBanner create)
+            => ApplicationApi.SendCommandAsync(create));
+        
+        group.MapDelete("/{bannerId:guid}", ([AsParameters] Commands.DeleteBanner delete)
+            => ApplicationApi.SendCommandAsync(delete));
         
         return builder;
     }

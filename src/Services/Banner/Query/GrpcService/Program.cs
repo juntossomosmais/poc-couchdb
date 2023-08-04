@@ -45,7 +45,7 @@ builder.Host.ConfigureServices((context, services) =>
     services.AddEventBus();
     services.AddMessageValidators();
     services.AddProjections();
-    services.AddInteractors();
+    services.AddEventInteractors();
 
     services.ConfigureEventBusOptions(
         context.Configuration.GetSection(nameof(EventBusOptions)));

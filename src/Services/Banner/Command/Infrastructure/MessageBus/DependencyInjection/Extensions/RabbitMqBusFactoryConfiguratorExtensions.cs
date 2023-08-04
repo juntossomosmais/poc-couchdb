@@ -7,7 +7,7 @@ internal static class RabbitMqBusFactoryConfiguratorExtensions
 {
     public static void ConfigureEventReceiveEndpoints(this IRabbitMqBusFactoryConfigurator cfg, IRegistrationContext context)
     {
-        //cfg.ConfigureEventReceiveEndpoint<RequestPaymentWhenOrderPlacedConsumer, Order.DomainEvent.OrderPlaced>(context);
+
     }
 
     private static void ConfigureEventReceiveEndpoint<TConsumer, TEvent>(this IRabbitMqBusFactoryConfigurator bus, IRegistrationContext context)

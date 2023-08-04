@@ -2,7 +2,7 @@ using FluentValidation;
 
 namespace WebAPI.APIs.Banners.Validators;
 
-public class CreateBannerValidator : AbstractValidator<Commands.Create>
+public class CreateBannerValidator : AbstractValidator<Commands.CreateBanner>
 {
     public CreateBannerValidator()
     {

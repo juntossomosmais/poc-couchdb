@@ -7,3 +7,14 @@ import "Abstractions/Abstractions.proto";
 service BannerService {
 
 }
+
+message BannerDetails {
+  string BannerId = 1;
+  string Title = 2;
+  string ImagePath = 3;
+  int32 Order = 4;
+  string CallToAction = 5;
+  string Author = 6;
+  int32 Status = 7;
+  string _id = 8;
+}

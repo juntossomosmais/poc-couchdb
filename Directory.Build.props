@@ -8,7 +8,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-        <NoWarn>8981, CS0660, CS0661</NoWarn>
+        <NoWarn>8981, CS0660, CS0661, CS8601, CS8618</NoWarn>
     </PropertyGroup>
 
     <PropertyGroup Label="Packages dependency versions">

@@ -1,6 +1,6 @@
 // Initialize PouchDB
 const localDB = new PouchDB('my_local_db');
-const remoteDB = new PouchDB('http://admin:admin_password@localhost:5984/poc-jsm');
+const remoteDB = new PouchDB('http://admin:admin_password@localhost:5984/bannerdetails');
 
 // Function to display data in the table
 function displayData(data) {
@@ -13,16 +13,21 @@ function displayData(data) {
 
   for (const item of data) {
     const row = table.insertRow();
-    row.insertCell().textContent = item.name;
-    row.insertCell().textContent = item.surname;
-    row.insertCell().textContent = item.age;
+    row.insertCell().textContent = item.title;
+    row.insertCell().textContent = item.imagePath;
+    row.insertCell().textContent = item.order;
+    row.insertCell().textContent = item.callToAction;
+    row.insertCell().textContent = item.author;
+    row.insertCell().textContent = item.status;
   }
 }
 
 // Function to fetch data from PouchDB
 function fetchAndDisplayData() {
   localDB.allDocs({ include_docs: true }).then(result => {
-    const data = result.rows.map(row => row.doc);
+    const data = result.rows
+      .map(row => row.doc)
+      .filter(item => item.status === 1);
     displayData(data);
   });
 }

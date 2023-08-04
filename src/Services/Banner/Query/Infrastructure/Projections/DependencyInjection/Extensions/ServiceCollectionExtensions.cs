@@ -1,5 +1,4 @@
 using Application.Abstractions;
-using Infrastructure.Projections.Abstractions;
 using Infrastructure.Projections.DependencyInjection.Options;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -12,8 +11,8 @@ public static class ServiceCollectionExtensions
     public static void AddProjections(this IServiceCollection services)
     {
         services.AddScoped(typeof(IProjectionGateway<>), typeof(ProjectionGateway<>));
-        services.AddScoped(typeof(ICouchDbContext<>), typeof(CouchDbContext<>));
     }
+    
     
     public static OptionsBuilder<CouchDbOptions> ConfigureCouchDbOptions(this IServiceCollection services, IConfigurationSection section)
         => services

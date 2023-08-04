@@ -1,4 +1,6 @@
 using Contracts.Abstractions.Messages;
+using Contracts.Services.Banner;
+using Infrastructure.EventBus.Consumers.Events;
 using MassTransit;
 
 namespace Infrastructure.EventBus.DependencyInjection.Extensions;
@@ -7,7 +9,8 @@ internal static class RabbitMqBusFactoryConfiguratorExtensions
 {
     public static void ConfigureEventReceiveEndpoints(this IBusFactoryConfigurator cfg, IRegistrationContext context)
     {
-        //cfg.ConfigureEventReceiveEndpoint<ProjectCartDetailsWhenChangedConsumer, DomainEvent.CartCreated>(context);
+        cfg.ConfigureEventReceiveEndpoint<ProjectBannerDetailsWhenBannerChangedConsumer, DomainEvent.BannerCreated>(context);
+        cfg.ConfigureEventReceiveEndpoint<ProjectBannerDetailsWhenBannerChangedConsumer, DomainEvent.BannerDeleted>(context);
     }
 
     private static void ConfigureEventReceiveEndpoint<TConsumer, TEvent>(this IReceiveConfigurator bus, IRegistrationContext context)

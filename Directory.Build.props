@@ -46,6 +46,9 @@
         <Grpc_AspNetCore_Version>2.55.0</Grpc_AspNetCore_Version>
         <Grpc_AspNetCore_Server_ClientFactory_Version>2.55.0</Grpc_AspNetCore_Server_ClientFactory_Version>
 
+        <!--Jaeger-->
+        <Jaeger_Version>1.0.3</Jaeger_Version>
+
         <!--JsonNet-->
         <JsonNet_ContractResolvers_Version>2.0.0</JsonNet_ContractResolvers_Version>
 
@@ -69,6 +72,14 @@
         <NUnit_Version>3.13.3</NUnit_Version>
         <NUnit3TestAdapter_Version>4.5.0</NUnit3TestAdapter_Version>
         <NUnit_Analyzers_Version>3.6.1</NUnit_Analyzers_Version>
+
+        <!--Open Telemetry-->
+        <OpenTelemetry_Version>1.5.1</OpenTelemetry_Version>
+        <OpenTelemetry_Exporter_Jaeger_Version>1.5.1</OpenTelemetry_Exporter_Jaeger_Version>
+        <OpenTelemetry_Extensions_Hosting_Version>1.5.1</OpenTelemetry_Extensions_Hosting_Version>
+        <OpenTelemetry_Instrumentation_AspNetCore_Version>1.5.1-beta.1</OpenTelemetry_Instrumentation_AspNetCore_Version>
+        <OpenTelemetry_Instrumentation_Http_Version>1.5.1-beta.1</OpenTelemetry_Instrumentation_Http_Version>
+        <OpenTelemetry_Instrumentation_MassTransit_Version>1.0.0-beta.3</OpenTelemetry_Instrumentation_MassTransit_Version>
 
         <!--Serilog-->
         <Serilog_Version>3.0.1</Serilog_Version>

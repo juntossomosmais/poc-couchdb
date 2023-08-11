@@ -54,6 +54,11 @@ builder.ConfigureServices((context, services) =>
     
     services.ConfigureMassTransitHostOptions(
         context.Configuration.GetSection(nameof(MassTransitHostOptions)));
+    
+    services.ConfigureDistributedTracingOptions(
+        context.Configuration.GetSection(nameof(DistributedTracingOptions)));
+    
+    services.AddOpenTelemetryExtension();
 });
 
 using var host = builder.Build();

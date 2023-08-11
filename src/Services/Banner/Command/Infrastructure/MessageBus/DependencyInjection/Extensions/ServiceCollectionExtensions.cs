@@ -90,4 +90,11 @@ public static class ServiceCollectionExtensions
             .Bind(section)
             .ValidateDataAnnotations()
             .ValidateOnStart();
+    
+    public static OptionsBuilder<DistributedTracingOptions> ConfigureDistributedTracingOptions(this IServiceCollection services, IConfigurationSection section)
+        => services
+            .AddOptions<DistributedTracingOptions>()
+            .Bind(section)
+            .ValidateDataAnnotations()
+            .ValidateOnStart();
 }

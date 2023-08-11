@@ -9,11 +9,18 @@
         <PackageReference Include="Grpc.AspNetCore.Server.ClientFactory" Version="$(Grpc_AspNetCore_Server_ClientFactory_Version)" />
 		<PackageReference Include="Grpc.Net.Client" Version="$(Grpc_Net_Client_Version)" />
         <PackageReference Include="Grpc.Net.ClientFactory" Version="$(Grpc_Net_ClientFactory_Version)" />
+        <PackageReference Include="Jaeger" Version="$(Jaeger_Version)" />
         <PackageReference Include="MassTransit.Newtonsoft" Version="$(MassTransit_Newtonsoft_Version)" />
         <PackageReference Include="MassTransit.RabbitMQ" Version="$(MassTransit_RabbitMQ_Version)" />
         <PackageReference Include="MicroElements.Swashbuckle.FluentValidation" Version="$(MicroElements_Swashbuckle_FluentValidation_Version)" />
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="$(Microsoft_AspNetCore_Mvc_NewtonsoftJson_Version)" />
         <PackageReference Include="Newtonsoft.Json" Version="$(Newtonsoft_Json_Version)" />
+        <PackageReference Include="OpenTelemetry" Version="$(OpenTelemetry_Version)" />
+        <PackageReference Include="OpenTelemetry.Exporter.Jaeger" Version="$(OpenTelemetry_Exporter_Jaeger_Version)" />
+        <PackageReference Include="OpenTelemetry.Extensions.Hosting" Version="$(OpenTelemetry_Extensions_Hosting_Version)" />
+        <PackageReference Include="OpenTelemetry.Instrumentation.AspNetCore" Version="$(OpenTelemetry_Instrumentation_AspNetCore_Version)" />
+        <PackageReference Include="OpenTelemetry.Instrumentation.MassTransit" Version="$(OpenTelemetry_Instrumentation_MassTransit_Version)" />
+        <PackageReference Include="OpenTelemetry.Instrumentation.Http" Version="$(OpenTelemetry_Instrumentation_Http_Version)" />
 		<PackageReference Include="Serilog.AspNetCore" Version="$(Serilog_AspNetCore_Version)" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="$(Swashbuckle_AspNetCore_Version)" />
         <PackageReference Include="Swashbuckle.AspNetCore.Newtonsoft" Version="$(Swashbuckle_AspNetCore_Newtonsoft_Version)" />

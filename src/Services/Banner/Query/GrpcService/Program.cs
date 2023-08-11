@@ -55,9 +55,14 @@ builder.Host.ConfigureServices((context, services) =>
     
     services.ConfigureCouchDbOptions(
         context.Configuration.GetSection(nameof(CouchDbOptions)));
+    
+    services.ConfigureDistributedTracingOptions(
+        context.Configuration.GetSection(nameof(DistributedTracingOptions)));
 
     services.AddHttpLogging(options
         => options.LoggingFields = HttpLoggingFields.All);
+    
+    services.AddOpenTelemetryExtension();
 });
 
 var app = builder.Build();

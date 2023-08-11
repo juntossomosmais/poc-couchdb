@@ -7,6 +7,11 @@
         <PackageReference Include="MassTransit.RabbitMQ" Version="$(MassTransit_RabbitMQ_Version)" />
         <PackageReference Include="Microsoft.Extensions.Hosting" Version="$(Microsoft_Extensions_Hosting_Version)" />
         <PackageReference Include="Microsoft.Extensions.Options.DataAnnotations" Version="$(Microsoft_Extensions_Options_DataAnnotations_Version)" />
+        <PackageReference Include="OpenTelemetry" Version="$(OpenTelemetry_Version)" />
+        <PackageReference Include="OpenTelemetry.Exporter.Jaeger" Version="$(OpenTelemetry_Exporter_Jaeger_Version)" />
+        <PackageReference Include="OpenTelemetry.Extensions.Hosting" Version="$(OpenTelemetry_Extensions_Hosting_Version)" />
+        <PackageReference Include="OpenTelemetry.Instrumentation.AspNetCore" Version="$(OpenTelemetry_Instrumentation_AspNetCore_Version)" />
+        <PackageReference Include="OpenTelemetry.Instrumentation.MassTransit" Version="$(OpenTelemetry_Instrumentation_MassTransit_Version)" />
         <PackageReference Include="Serilog" Version="$(Serilog_Version)" />
     </ItemGroup>
     

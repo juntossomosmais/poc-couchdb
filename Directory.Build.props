@@ -29,7 +29,7 @@
         <!--EntityFrameworkCore-->
         <Microsoft_EntityFrameworkCore_Version>7.0.9</Microsoft_EntityFrameworkCore_Version>
         <Microsoft_EntityFrameworkCore_Relational_Version>7.0.9</Microsoft_EntityFrameworkCore_Relational_Version>
-        <Microsoft_EntityFrameworkCore_Design_Version>7.0.9</Microsoft_EntityFrameworkCore_Design_Version>
+        <Microsoft_EntityFrameworkCore_Design_Version>7.0.13</Microsoft_EntityFrameworkCore_Design_Version>
         <Microsoft_EntityFrameworkCore_SqlServer_Version>7.0.9</Microsoft_EntityFrameworkCore_SqlServer_Version>
         <Microsoft_EntityFrameworkCore_Tools_Version>7.0.9</Microsoft_EntityFrameworkCore_Tools_Version>
 

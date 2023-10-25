@@ -63,7 +63,7 @@
         <!--Microsoft-->
         <Microsoft_Extensions_Hosting_Version>7.0.1</Microsoft_Extensions_Hosting_Version>
         <Microsoft_Extensions_Options_DataAnnotations_Version>7.0.0</Microsoft_Extensions_Options_DataAnnotations_Version>
-        <Microsoft_AspNetCore_Mvc_NewtonsoftJson_Version>7.0.9</Microsoft_AspNetCore_Mvc_NewtonsoftJson_Version>
+        <Microsoft_AspNetCore_Mvc_NewtonsoftJson_Version>7.0.13</Microsoft_AspNetCore_Mvc_NewtonsoftJson_Version>
 
         <!--Newtonsoft-->
         <Newtonsoft_Json_Version>13.0.3</Newtonsoft_Json_Version>
